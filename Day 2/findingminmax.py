@@ -7,5 +7,11 @@ def find_max_min(arr):
         if num < min_val:
             min_val = num
     return max_val, min_val
-arr=[12,242,14,341,43,1]
-print(f"The min value and maximum value is :{find_max_min(arr)}")
+
+arr = list(map(int, input("Enter the array elements separated by spaces: ").split()))
+
+if len(arr) < 2:
+    print("Array must have at least 2 elements.")
+else:
+    max_val,min_val = find_max_min(arr)
+    print(f"The min value is {min_val} and maximum value is: {max_val}")
